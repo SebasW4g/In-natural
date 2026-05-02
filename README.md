@@ -1,2 +1,0 @@
-# In-natural
-Personal webpage
