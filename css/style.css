@@ -1,0 +1,234 @@
+body {
+    background-color: #000000;
+}
+
+@font-face {
+  font-family: 'VCR';
+  /* Si el archivo termina en .ttf, el formato debe ser 'truetype' */
+  src: url('../fonts/VCR_OSD_MONO_1.001.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.navbar-deg {
+    background: linear-gradient(180deg,rgba(0, 0, 0, 1) 48%, rgba(237, 221, 83, 0) 100%);
+    vertical-align: middle;
+}
+
+.vcr {
+  font-family: 'VCR'
+}
+
+.palabras-nav {
+  font-size: 1.5rem;
+  vertical-align: middle; 
+}
+
+.nav-link {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+    #autoModal .modal-content {
+        background-image: url('/Innatural/img/pop-up-r.png'); 
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border: none;
+        border-radius: 85px; 
+        overflow: hidden;
+        min-height: 690px; 
+        box-shadow: 
+        0 0 15px rgba(0, 255, 255, 0.3), /* Cian interno */
+        0 0 30px rgba(100, 50, 200, 0.7), /* Morado medio */
+        0 0 60px rgba(70, 20, 150, 0.5);  /* Morado amplio */
+        animation: glowPulse 2s infinite alternate;
+    }
+
+  #autoModal .modal-body {
+        background-color: rgba(0, 0, 0, 0); 
+        display: flex;
+        align-items: flex-end; 
+        padding-bottom: 50px;
+    }
+
+.palabras-Pop {
+  font-size: 2rem;
+  vertical-align: middle; 
+}
+
+.modal-backdrop.show {
+        opacity: 0.9; 
+        background-color: #000;
+    }
+
+    @keyframes glowPulse {
+        from {
+            box-shadow: 
+                0 0 10px rgba(0, 255, 255, 0.2),
+                0 0 20px rgba(100, 50, 200, 0.5),
+                0 0 40px rgba(70, 20, 150, 0.3);
+        }
+        to {
+            box-shadow: 
+                0 0 20px rgba(0, 255, 255, 0.4),
+                0 0 40px rgba(100, 50, 200, 0.8),
+                0 0 80px rgba(70, 20, 150, 0.6);
+        }
+    }
+
+.btn.vcr {
+    position: relative;
+    background: transparent;
+    padding: 10px 30px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    display: inline-flex; /* Asegura alineación correcta */
+    align-items: center;
+}
+
+.btn.vcr::before {
+    content: ''; /* Mantener vacío para usar background */
+    position: absolute;
+    
+    /* RUTA LOCAL: Asegúrate de que la ruta sea correcta desde tu archivo HTML/CSS */
+    background-image: url('/Innatural/img/punteador.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    /* TAMAÑO: Define el tamaño exacto que quieres para el icono */
+    width: 25px; 
+    height: 25px;
+
+    /* POSICIÓN INICIAL: Centrado vertical y fuera a la izquierda */
+    top: 50%;
+    transform: translateY(-50%);
+    left: -5px; 
+    
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.btn.vcr:hover {
+    padding-left: 40px; 
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+
+
+.btn.vcr:hover::before {
+    left: 10px;
+    opacity: 1;
+}
+
+.Tele-1 {
+        border: none;
+        border-radius: 85px; 
+}
+
+
+@font-face {
+  font-family: 'Writter'; 
+  src: url('../fonts/WriteTyper.ttf') format('truetype');
+}
+
+.letra {
+  display: inline-block;
+  transition: all 0.05s;
+  font-size: 2.4rem;
+  font-family: 'Writter'; 
+}
+
+.letra2 {
+  display: inline-block;
+  font-size: 1.4rem;
+  font-family: 'Writter'; 
+}
+
+
+
+.Writter {
+  font-family: 'Writter';
+}
+
+
+.color-rojo { color: #ff0000; }
+.color-verde { color: #00ff41; }
+.color-azul { color: #00d4ff; }
+.color-blanco { color: #f2f2f2; }
+.color-negro { color: #000000; }
+
+    .caps { text-transform: uppercase; }
+    .low  { text-transform: lowercase; }
+    
+    .shake {
+      transform: translate(1px, -1px) rotate(1deg);
+      filter: blur(0.5px);
+    }
+
+
+.bg-section-1, .bg-section-2 .bg-section-3{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+}
+
+.bg-section-1 {
+    background-image: url('/Innatural/img/fondo1Test.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    /* Esto asegura que el contenedor no colapse */
+    min-height: 100vh; 
+    min-width: 1200px;
+}
+
+.bg-section-2 {
+    background-image: url('/Innatural/img/fondo2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-width: 1200px;
+}
+
+.bg-section-3 {
+    background-image: url('/Innatural/img/Fondo3.2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-width: 1200px;
+}
+
+.escena-estatica {
+    position: relative;
+    width: 100vw;  
+    height: 100vh; 
+    min-width: 1200px; 
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.texto-bloqueado {
+    position: absolute;
+    z-index: 10;
+}
+
+/* Elimina la transición de movimiento y desvanecimiento */
+/* Cancela la animación de deslizamiento del carrusel */
+/* Cancela la animación de deslizamiento del carrusel */
+.carousel-item {
+    transition: none !important;
+}
+
+.carousel-fade .active.carousel-item-start,
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+    transition: none !important;
+    transform: none !important;
+}
